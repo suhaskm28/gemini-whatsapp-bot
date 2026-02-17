@@ -4,11 +4,11 @@ A serverless-ready backend system that receives WhatsApp messages, processes the
 
 Built using **Python, FastAPI, WhatsApp Cloud API, and Google Gemini**.
 
-## 📸 WhatsApp Bot Demo
+## WhatsApp Bot Demo
 
 Below is an example conversation showing the bot responding with context-aware replies.
 
-![WhatsApp Bot Demo](assets/whatsapp-demo.png)
+![WhatsApp Bot Demo](assets/Whatsapp demo.png)
 
 ---
 

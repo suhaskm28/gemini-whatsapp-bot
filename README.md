@@ -4,7 +4,9 @@ A serverless-ready backend system that receives WhatsApp messages, processes the
 
 Built using **Python, FastAPI, WhatsApp Cloud API, and Google Gemini**.
 
-## WhatsApp Bot Demo
+---
+
+## 📸 WhatsApp Bot Demo
 
 Below is an example conversation showing the bot responding with context-aware replies.
 
@@ -12,22 +14,20 @@ Below is an example conversation showing the bot responding with context-aware r
 
 ---
 
----
+## ✨ Features
 
-## Features
-
-Receive WhatsApp messages via webhook
-Parse and route complex webhook JSON payloads
-Generate AI responses using Gemini API
-Send automated replies via WhatsApp Cloud API
-Maintain short-term conversation memory for multi-turn interactions
-Secure webhook verification & token management
-Production-ready error handling & logging
-Cloud deployable (GCP / AWS)
+* Receive WhatsApp messages via webhook
+* Parse and route complex webhook JSON payloads
+* Generate AI responses using Gemini API
+* Send automated replies via WhatsApp Cloud API
+* Maintain short-term conversation memory for multi-turn interactions
+* Secure webhook verification & token management
+* Production-ready error handling & logging
+* Cloud deployable (GCP / AWS)
 
 ---
 
-## Architecture
+## 🧱 Architecture
 
 ```
 User → WhatsApp → Meta Webhook
@@ -47,24 +47,24 @@ User → WhatsApp → Meta Webhook
 
 ## 🛠 Tech Stack
 
-**Backend**
+### Backend
 
 * Python
 * FastAPI
 * Async processing
 
-**APIs & Integrations**
+### APIs & Integrations
 
 * WhatsApp Cloud API (Meta)
 * Google Gemini API
 
-**Cloud & DevOps**
+### Cloud & DevOps
 
 * ngrok (local tunneling)
 
 ---
 
-## Project Structure
+## 📁 Project Structure
 
 ```
 whatsapp-ai-bot/
@@ -75,8 +75,11 @@ whatsapp-ai-bot/
 │   ├── webhook_handler.py
 │   ├── gemini_service.py
 │   ├── whatsapp_service.py
-│   ├── conversation_store.py│   
-|   ├── utils.py
+│   ├── conversation_store.py
+│   └── utils.py
+│
+├── assets/
+│   └── whatsapp-demo.png
 │
 ├── requirements.txt
 └── .env
@@ -84,7 +87,7 @@ whatsapp-ai-bot/
 
 ---
 
-## Conversation Memory (Multi-Turn Context)
+## 🧠 Conversation Memory (Multi-Turn Context)
 
 The bot maintains short-term conversation history per user to support context-aware, multi-step interactions.
 
@@ -113,16 +116,16 @@ Replace in-memory storage with:
 
 ## ⚙️ Setup Instructions
 
-### 1 Clone Repository
+### 1️⃣ Clone Repository
 
 ```bash
-git clone https://github.com/yourusername/whatsapp-ai-bot.git
-cd whatsapp-ai-bot
+git clone https://github.com/suhaskm28/gemini-whatsapp-bot.git
+cd gemini-whatsapp-bot
 ```
 
 ---
 
-### 2 Create Virtual Environment
+### 2️⃣ Create Virtual Environment
 
 ```bash
 python -m venv venv
@@ -132,7 +135,7 @@ source venv/bin/activate   # Mac/Linux
 
 ---
 
-### 3 Install Dependencies
+### 3️⃣ Install Dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -140,7 +143,7 @@ pip install -r requirements.txt
 
 ---
 
-### 4 Environment Variables
+### 4️⃣ Environment Variables
 
 Create a `.env` file:
 
@@ -162,7 +165,7 @@ GEMINI_API_KEY=your_gemini_api_key
 3. Get access token & phone number ID
 4. Add your phone as test recipient
 
-Docs: [https://developers.facebook.com/docs/whatsapp/cloud-api](https://developers.facebook.com/docs/whatsapp/cloud-api)
+Docs: <https://developers.facebook.com/docs/whatsapp/cloud-api>
 
 ---
 
@@ -172,7 +175,7 @@ Docs: [https://developers.facebook.com/docs/whatsapp/cloud-api](https://develope
 2. Enable Generative Language API
 3. Link billing (required for quota)
 
-Docs: [https://ai.google.dev/](https://ai.google.dev/)
+Docs: <https://ai.google.dev/>
 
 ---
 
@@ -192,7 +195,7 @@ uvicorn app.main:app --host 0.0.0.0 --port 8000
 ngrok http 8000
 ```
 
-Copy HTTPS URL.
+Copy the HTTPS URL.
 
 ---
 
@@ -200,13 +203,13 @@ Copy HTTPS URL.
 
 In Meta Dashboard:
 
-Callback URL:
+**Callback URL**
 
 ```
 https://YOUR-NGROK-URL/webhook
 ```
 
-Verify Token:
+**Verify Token**
 
 ```
 myverifytoken123
@@ -218,13 +221,26 @@ Subscribe to:
 
 ---
 
-## Testing
+## 🧪 Testing
 
 Send a WhatsApp message to the test number:
 
+```
+Hello
+```
+
+Try multi-step interaction:
+
+```
+I want to book an appointment
+Tomorrow at 3pm
+```
+
+The bot will respond with context-aware replies.
+
 ---
 
-## Security Features
+## 🔐 Security Features
 
 ✔ Webhook verification
 ✔ Secure token storage via environment variables
@@ -241,7 +257,7 @@ MIT License
 
 ## 👤 Author
 
-**Suhas k m**
-GitHub: [https://github.com/suhaskm28](https://github.com/suhaskm28)
+**Suhas K M**
+GitHub: <https://github.com/suhaskm28>
 
 ---

@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual Environment
+venv/
+.env/
+env/
+
+# Environment variables (SECRET)
+.env
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# ngrok
+ngrok.exe
+
+# build artifacts
+dist/
+build/
+
+# Mac/Linux
+*.swp
